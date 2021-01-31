@@ -1,0 +1,26 @@
+.about {
+  padding: 9.6rem 0;
+  background-color: $mainColor;
+  color: $whiteColor;
+  text-align: center;
+  &__title {
+  }
+
+  &__description {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    &--textBox {
+      margin-bottom: 1.6rem;
+      padding: 0 2.4rem;
+    }
+  }
+  &__decoration {
+    .decoration__line {
+      background-color: $whiteColor;
+    }
+  }
+}

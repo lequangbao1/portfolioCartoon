@@ -1,0 +1,22 @@
+.footer--icon {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  border: 2px solid $whiteColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: 0.125s linear;
+  i {
+    color: $whiteColor;
+    font-size: 2rem;
+  }
+  &:hover {
+    background-color: $whiteColor;
+    & > i {
+      color: $blackColor;
+    }
+  }
+}

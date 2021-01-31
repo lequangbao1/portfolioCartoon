@@ -1,0 +1,29 @@
+.contact {
+  padding: 9.6rem 0;
+  text-align: center;
+  &__title {
+    color: $subColor;
+  }
+  &__decoration {
+    .decoration__line {
+      background-color: $subColor;
+    }
+    i {
+      color: $subColor;
+    }
+  }
+  &__input {
+    display: flex;
+    justify-content: center;
+    &Box {
+      margin: 0 2.4rem 1.6rem 2.4rem;
+      padding: 0;
+    }
+    &Box:not(:last-child) {
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid $whiteColor--light;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

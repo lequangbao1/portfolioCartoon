@@ -1,0 +1,105 @@
+.header {
+  background-color: $subColor;
+  padding: 2.2rem 0;
+  z-index: 1000;
+  transition: all 0.2s ease;
+  position: fixed;
+  width: 100%;
+  @include max-breakpoint(991) {
+    padding: 1.5rem 0;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__logo {
+    font-family: $subFont;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    @include max-breakpoint(991) {
+      font-size: 2rem;
+    }
+  }
+  .header__logo--small {
+    font-size: 2.4rem;
+    @include max-breakpoint(991) {
+      font-size: 2rem;
+    }
+  }
+  &__menu {
+    // width: 100%;
+    display: flex;
+    padding: 0 2.5rem;
+    transition: all 0.4s ease-in-out;
+    &-item {
+      &:nth-child(2) {
+        margin: 0 1rem;
+        @include max-breakpoint(991) {
+          margin: 0;
+        }
+      }
+      &--link {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-family: $subFont;
+        text-transform: uppercase;
+        color: $whiteColor;
+        // background-color: $mainColor;
+        padding: 2rem 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        border-radius: 8px;
+        &:hover {
+          color: $mainColor;
+        }
+        @include max-breakpoint(991) {
+          padding: 1.6rem 0;
+        }
+      }
+    }
+    @include max-breakpoint(991) {
+      width: 100%;
+      padding: 0;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  .header__menu--show {
+    max-height: 16rem;
+  }
+  .header__menu-item--highlight {
+    background-color: $mainColor;
+    &:hover {
+      color: $whiteColor;
+    }
+    @include max-breakpoint(991) {
+      background-color: unset;
+      color: $mainColor;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+.header--scrollDown {
+  padding: 8px 0;
+  @include max-breakpoint(991) {
+    padding: 1.5rem 0;
+  }
+}
+
+.body--noScroll {
+  overflow: hidden;
+}

@@ -1,0 +1,25 @@
+.input--form {
+  label {
+    visibility: visible;
+    font-size: 1.36rem;
+    color: $mainColor;
+    text-align: left;
+    opacity: 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    color: $inputColor;
+  }
+
+  textarea {
+    resize: none;
+  }
+}

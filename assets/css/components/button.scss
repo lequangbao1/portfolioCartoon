@@ -1,0 +1,155 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  &--menu {
+    background-color: $mainColor;
+    padding: 1.6rem 1.4rem;
+    display: none;
+    span {
+      font-family: $subFont;
+      font-size: 1.28rem;
+      text-transform: uppercase;
+      color: $whiteColor;
+      font-weight: 700;
+      margin-right: 3px;
+    }
+    i {
+      font-size: 1.25rem;
+      padding: 0;
+      margin: 0;
+      color: #fff;
+    }
+    &:hover {
+      background-color: $mainColorHover;
+    }
+    @include max-breakpoint(991) {
+      display: inline-block;
+    }
+  }
+
+  &--openModal {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    // transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    width: calc(100% - (2.4rem * 2));
+    height: 100%;
+    background-color: rgba($mainColor, 0.9);
+    opacity: 0;
+    transition: 0.2s ease-in;
+    i {
+      font-size: 7.5rem;
+      color: $whiteColor;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--closeModal {
+    background-color: $mainColor;
+    color: $whiteColor;
+    width: 15.3rem;
+    height: 4rem;
+    padding: 12px 0;
+    border-radius: 8px;
+    margin: 0 auto;
+    transition: 0.1s linear;
+
+    &:hover {
+      background-color: $mainColorHover;
+    }
+
+    i {
+      font-size: 1.5rem;
+      margin: 0 10px;
+      padding: 0;
+    }
+
+    span {
+      text-transform: capitalize;
+      font-size: 1.6rem;
+    }
+  }
+
+  &--closeModalX {
+    position: absolute;
+    top: 1.6rem;
+    right: 2.4rem;
+
+    i {
+      color: $mainColor;
+      font-size: 5rem;
+    }
+
+    &:hover > i {
+      color: lighten($mainColor, 5%);
+    }
+  }
+
+  &--download {
+    background-color: $mainColor;
+    width: 23.2rem;
+    height: 6.6rem;
+    margin: 2.4rem auto 0 auto;
+    border: 2px solid $whiteColor;
+
+    transition: all 0.15s linear;
+
+    span {
+      //   display: inline-block;
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+    i {
+      font-size: 2rem;
+      padding-right: 12px;
+    }
+
+    &:hover {
+      background-color: $whiteColor;
+      color: $blackColor;
+    }
+  }
+  &--submit {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $whiteColor;
+    background-color: $mainColor;
+    width: 10.3rem;
+    height: 6.6rem;
+    cursor: pointer;
+  }
+  &--toTop {
+    display: none;
+    position: fixed;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    height: 5.6rem;
+    width: 5.6rem;
+    background-color: rgba($blackColor, 0.5);
+    transition: 0.2s linear;
+    i {
+      font-size: 2rem;
+      color: $whiteColor;
+    }
+
+    @include max-breakpoint(991) {
+      display: flex;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
